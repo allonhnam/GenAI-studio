@@ -23,7 +23,7 @@ from services.erase_foreground import erase_foreground
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="AdSnap Studio",
+    page_title="GenAI Studio",
     page_icon="🎨",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -137,15 +137,15 @@ def auto_check_images(status_container):
     return False
 
 def main():
-    st.title("AdSnap Studio")
+    st.title("GenAI Studio")
     initialize_session_state()
     
-    # Sidebar for API key
-    with st.sidebar:
-        st.header("Settings")
-        api_key = st.text_input("Enter your API key:", value=st.session_state.api_key if st.session_state.api_key else "", type="password")
-        if api_key:
-            st.session_state.api_key = api_key
+    # # Sidebar for API key
+    # with st.sidebar:
+    #     st.header("Settings")
+    #     api_key = st.text_input("Enter your API key:", value=st.session_state.api_key if st.session_state.api_key else "", type="password")
+    #     if api_key:
+    #         st.session_state.api_key = api_key
 
     # Main tabs
     tabs = st.tabs([
