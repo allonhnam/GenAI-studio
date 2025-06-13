@@ -265,6 +265,13 @@ def main():
                     st.error(f"Error generating images: {str(e)}")
                     st.write("Full error:", str(e))
     
+    if st.session_state.edited_image:
+        st.image(
+            st.session_state.edited_image,
+            caption="Generated image",
+            use_column_width=True
+        )
+
     # Product Photography Tab
     with tabs[1]:
         st.header("Product Photography")
